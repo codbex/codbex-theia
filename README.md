@@ -2,7 +2,7 @@
 
 Theia Edition contains only the Terminal over HTTP standard components.
 
-It is good for getting termical access to the target environment such as Kubernetes.
+It is good for getting shell access to the target environment such as Kubernetes.
 
 
 #### Docker
