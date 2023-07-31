@@ -9,7 +9,7 @@ It is good for getting shell access to the target environment such as Kubernetes
 
 ```
 docker pull ghcr.io/codbex/codbex-theia:latest
-docker run --name codbex-theia --rm -p 8080:8080 ghcr.io/codbex/codbex-theia:latest
+docker run --name codbex-theia --rm -p 80:80 ghcr.io/codbex/codbex-theia:latest
 ```
 
 #### Build
@@ -33,11 +33,11 @@ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000 -jar app
 #### Web
 
 ```
-http://localhost:8080
+http://localhost
 ```
 
 #### REST API
 
 ```
-http://localhost:8080/swagger-ui/index.html
+http://localhost/swagger-ui/index.html
 ```
