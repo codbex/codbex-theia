@@ -36,5 +36,5 @@ jobs:
   
         ## Access points:
   
-        - [/services/web/ide-terminal/](http://localhost:80/services/web/ide-terminal/) - Terminal Perspective
+        - [/services/web/ide-terminal/](http://localhost/services/web/ide-terminal/) - Terminal Perspective
     secrets: inherit
