@@ -1,1 +1,1 @@
-java -jar ./application/target/codbex-theia-application-0.1.0-SNAPSHOT.jar
+java -jar ./application/target/codbex-theia-application-*.jar

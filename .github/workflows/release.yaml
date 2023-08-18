@@ -30,11 +30,11 @@ jobs:
   
         ```
         docker run --name codbex-theia \
-        --rm -p 8080:8080 -p 8081:8081 \
+        --rm -p 80:80 -p 8081:8081 \
         ghcr.io/codbex/codbex-theia:${{ inputs.release-version }}
         ```
   
         ## Access points:
   
-        - [/services/web/ide-terminal/](http://localhost:8080/services/web/ide-terminal/) - Terminal Perspective
+        - [/services/web/ide-terminal/](http://localhost:80/services/web/ide-terminal/) - Terminal Perspective
     secrets: inherit
