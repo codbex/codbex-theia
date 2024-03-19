@@ -14,7 +14,6 @@
 	<artifactId>codbex-theia-application</artifactId>
 	<packaging>jar</packaging>
 
-
 	<dependencies>
 
 		<dependency>
@@ -146,7 +145,6 @@
 		</dependency>
 
 	</dependencies>
-
 
 	<build>
 		<plugins>
