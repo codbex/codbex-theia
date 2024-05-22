@@ -23,11 +23,12 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableJpaAuditing
 @EnableJpaRepositories
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = {"com.codbex.theia", "org.eclipse.dirigible.components"},
+        exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
+                HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
 @EnableScheduling
 public class TheiaApplication {
-	
+
     public static void main(String[] args) {
         SpringApplication.run(TheiaApplication.class, args);
     }
