@@ -8,6 +8,6 @@ RUN npm i -g typescript
 RUN apk add git
 RUN apk --no-cache add msttcorefonts-installer fontconfig && update-ms-fonts && fc-cache -f
 
-COPY target/*.jar codbex-theia.jar
+COPY target/codbex-theia-[0-9]*.jar codbex-theia.jar
 ENTRYPOINT ["java", "--add-opens", "java.base/java.lang=ALL-UNNAMED", "--add-opens", "java.base/java.lang.reflect=ALL-UNNAMED", "--add-opens", "java.base/java.nio=ALL-UNNAMED", "-jar", "/codbex-theia.jar"]
 EXPOSE 80 8081
