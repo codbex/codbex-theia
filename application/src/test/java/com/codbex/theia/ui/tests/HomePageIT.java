@@ -10,22 +10,15 @@
  */
 package com.codbex.theia.ui.tests;
 
-import com.codbex.theia.ui.Theia;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
-
-    private static final String CODBEX_HEADER = "codbex";
-
-    @Autowired
-    private Theia theia;
+class HomePageIT extends TheiaIntegrationTest {
 
     @Test
     void testOpenHomepage() {
-        theia.openHomePage();
+        ide.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, CODBEX_HEADER);
+        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, "codbex");
     }
 }
