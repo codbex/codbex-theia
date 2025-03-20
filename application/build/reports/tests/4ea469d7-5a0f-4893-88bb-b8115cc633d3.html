@@ -1,0 +1,325 @@
+<html lang="en" ng-app="terminal" ng-controller="TerminalController" xmlns="http://www.w3.org/1999/xhtml"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" ng-href="/services/web/ide-branding/images/favicon.ico" href="/services/web/ide-branding/images/favicon.ico" dg-brand-icon="">
+        <title dg-brand-title="">Terminal | codbex</title>
+        <script type="text/javascript" src="/services/web/ide-terminal/services/terminal-perspective.js"></script>
+        </head><body class="dg-light"><!----><link type="text/css" rel="stylesheet" ng-repeat="link in links" ng-href="/services/web/theme-quartz-light/css/quartz-fixes.css" href="/services/web/theme-quartz-light/css/quartz-fixes.css"><!----><link type="text/css" rel="stylesheet" ng-repeat="link in links" ng-href="/webjars/sap-theming__theming-base-content/11.18.2/content/Base/baseLib/sap_fiori_3/css_variables.css" href="/webjars/sap-theming__theming-base-content/11.18.2/content/Base/baseLib/sap_fiori_3/css_variables.css"><!----><link type="text/css" rel="stylesheet" ng-repeat="link in links" ng-href="/webjars/fundamental-styles/0.38.0/dist/theming/sap_fiori_3.css" href="/webjars/fundamental-styles/0.38.0/dist/theming/sap_fiori_3.css"><!---->
+        <script type="text/javascript" src="/services/js/resources-core/services/loader.js?id=ide-perspective-js"></script>
+        <link type="text/css" rel="stylesheet" href="/services/js/resources-core/services/loader.js?id=ide-perspective-css">
+    
+
+    
+        <div class="dg-main-header" menu-ext-id="ide-terminal-menu">
+    <div ng-class="getClasses()" ng-transclude="" has-menu="true" class="fd-tool-header fd-tool-header--menu">
+        <div class="fd-tool-header__group fd-tool-header__group--menu" ng-class="getClasses()" ng-transclude="" has-menu="true">
+            <div class="dg-hamburger-menu fd-tool-header__element" fd-tool-header-element="">
+                <div class="fd-popover">
+                <ng-transclude ng-transclude-slot="control"><div class="fd-popover__control" ng-transclude="">
+                        <button fd-button-internal="" class="fd-button fd-button--tool-header fd-button--compact" ng-class="getClasses()" ng-disabled="{'disabled':true}[state]" aria-pressed="" ng-attr-aria-expanded="{{ state === 'expanded' ? true : undefined }}" fd-tool-header-button="" compact="true" glyph="sap-icon--menu2" aria-label="main menu button" aria-controls="pa227c3b3-75d6-ad88-7643-654338a53e76" aria-haspopup="true">
+                    <!----><i ng-if="glyph" ng-class="glyph" role="presentation" class="sap-icon--menu2"></i><!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                </button>
+                    </div></ng-transclude>
+                <ng-transclude ng-transclude-slot="body"><div id="pa227c3b3-75d6-ad88-7643-654338a53e76" class="fd-popover__body fd-popover__body--no-arrow" ng-class="getClasses()" aria-hidden="true" no-arrow="true" can-scroll="false">
+                <!---->
+                <!----><ng-transclude ng-if="!canScroll">
+                        <nav class="fd-menu" ng-show="show" ng-class="getMenuClasses()" aria-label="header menu" aria-hidden="false"><ul ng-class="getListClasses()" role="menu" tabindex="-1" ng-transclude="" class="fd-menu__list fd-menu__list--no-shadow">
+                            <!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" ng-mouseenter="show()" ng-mouseleave="hide($event)" tabindex="0" ng-focus="focus()" ng-repeat="menuItem in menu track by $index" title="Help" can-scroll="::isScrollable(menuItem.items)">
+                <span class="fd-menu__link has-child" aria-controls="sl0cdec37e-8815-7ab9-9736-22276ae9d4eb" aria-expanded="false" aria-haspopup="true" role="menuitem" ng-class="getClasses()">
+                    <!---->
+                    <span class="fd-menu__title">Help</span>
+                    <span class="fd-menu__addon-after fd-menu__addon-after--submenu"></span>
+                </span>
+                <!---->
+                <!----><ul ng-if="!canScroll" class="fd-menu__sublist" id="sl0cdec37e-8815-7ab9-9736-22276ae9d4eb" aria-hidden="true" role="menu" ng-transclude="">
+                                <header-submenu sublist="::menuItem.items" menu-handler="::menuClick"><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="Help Portal" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Help Portal</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="Contact Support" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Contact Support</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="Pricing Plans" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Pricing Plans</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="What's New" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">What's New</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----><!----><li class="fd-menu__item has-separator" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="Check for Updates" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link has-separator" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Check for Updates</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in sublist track by $index" ng-if="!item.items" has-separator="::item.divider" title="About" ng-click="::menuHandler(item)">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">About</span>
+                    <!---->
+                </span>
+            </li><!---->
+<!----><!----></header-submenu>
+                            </ul><!---->
+            </li><!---->
+                        </ul></nav>
+                    </ng-transclude><!---->
+            </div></ng-transclude>
+            </div>
+            </div>
+            <a fd-tool-header-element="" class="dg-header-logo fd-tool-header__element" href="https://www.codbex.com/" style="text-decoration: none">
+                <img fd-tool-header-logo="" alt="" class="fd-tool-header__logo" ng-src="/services/web/ide-branding/images/logo.svg" src="/services/web/ide-branding/images/logo.svg">
+            </a>
+            <a fd-tool-header-element="" href="https://www.codbex.com/" style="text-decoration: none" class="fd-tool-header__element">
+                <h5 fd-title="" header-size="h5" fd-tool-header-title="" class="fd-tool-header__product-name fd-title"><b>codbex</b></h5>
+            </a>
+            <div class="dg-menubar fd-tool-header__element" fd-tool-header-element="" header-menu="" menu-handler="menuClick" menu-list="menu"><!----><div fd-tool-header-element="" ng-repeat="menuItem in menuList track by $index" class="fd-tool-header__element">
+                <div class="fd-popover">
+                <ng-transclude ng-transclude-slot="control"><div class="fd-popover__control" ng-transclude="">
+                        <button fd-button-internal="" class="fd-button fd-button--tool-header fd-button--menu fd-button--transparent fd-button--compact" ng-class="getClasses()" ng-disabled="{'disabled':true}[state]" aria-pressed="" ng-attr-aria-expanded="{{ state === 'expanded' ? true : undefined }}" fd-tool-header-button="" compact="true" dg-label="Help" dg-type="transparent" is-menu="true" aria-label="menu button Help" aria-controls="pbed06686-f622-2e44-6fd0-504e939c4814" aria-haspopup="true">
+                    <!---->
+                    <!----><span ng-if="dgLabel" ng-class="getTextClasses()" class="fd-button__text">Help</span><!---->
+                    <!---->
+                    <!----><i ng-if="isMenu" ng-class="getArrowClass()" class="sap-icon--slim-arrow-down"></i><!---->
+                    <!---->
+                </button>
+                    </div></ng-transclude>
+                <ng-transclude ng-transclude-slot="body"><div id="pbed06686-f622-2e44-6fd0-504e939c4814" class="fd-popover__body fd-popover__body--no-arrow" ng-class="getClasses()" aria-hidden="true" no-arrow="true" can-scroll="::isScrollable()">
+                <!---->
+                <!----><ng-transclude ng-if="!canScroll">
+                        <nav class="fd-menu" ng-show="show" ng-class="getMenuClasses()" aria-label="header menu" aria-hidden="false"><ul ng-class="getListClasses()" role="menu" tabindex="-1" ng-transclude="" class="fd-menu__list fd-menu__list--no-shadow">
+                            <!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="Help Portal" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Help Portal</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="Contact Support" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Contact Support</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="Pricing Plans" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Pricing Plans</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="What's New" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">What's New</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!----><!----><li class="fd-menu__item has-separator" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="Check for Updates" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link has-separator" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Check for Updates</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!----><!----><li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" ng-repeat="item in menuItem.items track by $index" ng-if="!item.items" title="About" ng-click="::menuHandler(item)" has-separator="::item.divider">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">About</span>
+                    <!---->
+                </span>
+            </li><!---->
+                            <!----><!---->
+                        </ul></nav>
+                    </ng-transclude><!---->
+            </div></ng-transclude>
+            </div>
+            </div><!----></div>
+        </div>
+        <div class="fd-tool-header__group fd-tool-header__group--actions" ng-class="getClasses()" ng-transclude="" position="right">
+            <div fd-tool-header-element="" class="dg-backdrop-element fd-tool-header__element">
+                <div class="fd-popover" close-innerclick="true">
+                <ng-transclude ng-transclude-slot="control"><div class="fd-popover__control" ng-transclude="">
+                        <button fd-button-internal="" class="fd-button fd-button--tool-header fd-button--menu fd-button--compact" ng-class="getClasses()" ng-disabled="{'disabled':true}[state]" aria-pressed="" ng-attr-aria-expanded="{{ state === 'expanded' ? true : undefined }}" compact="true" dg-label="Theme" title="Theme" is-menu="true" fd-tool-header-button="" aria-controls="p74535e75-952c-61b3-27f2-d18d81215c67" aria-haspopup="true">
+                    <!---->
+                    <!----><span ng-if="dgLabel" ng-class="getTextClasses()" class="fd-button__text">Theme</span><!---->
+                    <!---->
+                    <!----><i ng-if="isMenu" ng-class="getArrowClass()" class="sap-icon--slim-arrow-down"></i><!---->
+                    <!---->
+                </button>
+                    </div></ng-transclude>
+                <ng-transclude ng-transclude-slot="body"><div id="p74535e75-952c-61b3-27f2-d18d81215c67" class="fd-popover__body fd-popover__body--no-arrow fd-popover__body--right fd-popover__body--arrow-x-end" ng-class="getClasses()" aria-hidden="true" no-arrow="true" dg-align="bottom-right">
+                <!----><div ng-if="canScroll" class="fd-popover__wrapper fd-scrollbar" style="max-height:1218px;" ng-transclude="">
+                        <nav class="fd-menu" ng-show="show" ng-class="getMenuClasses()" aria-label="theme menu" aria-hidden="false"><ul ng-class="getListClasses()" role="menu" tabindex="-1" ng-transclude="" class="fd-menu__list fd-menu__list--no-shadow">
+                            <!---->
+                            <li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" title="Reset" icon-before="sap-icon--reset" ng-click="resetAll()">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!----><span ng-if="iconBefore" class="fd-menu__addon-before">
+                        <!----><i class="sap-icon--reset" ng-if="iconBefore !== 'none'" role="presentation"></i><!---->
+                    </span><!---->
+                    <span class="fd-menu__title">Reset</span>
+                    <!---->
+                </span>
+            </li>
+                        </ul></nav>
+                    </div><!---->
+                <!---->
+            </div></ng-transclude>
+            </div>
+                <div class="fd-popover" close-innerclick="true">
+                <ng-transclude ng-transclude-slot="control"><div class="fd-popover__control" ng-transclude="">
+                        <button fd-button-internal="" class="fd-button fd-button--tool-header fd-button--menu fd-button--transparent fd-button--compact" ng-class="getClasses()" ng-disabled="{'disabled':true}[state]" aria-pressed="" ng-attr-aria-expanded="{{ state === 'expanded' ? true : undefined }}" compact="true" dg-label="admin
+" dg-type="transparent" is-menu="true" fd-tool-header-button="" aria-controls="pae1f7611-3639-fe32-6bf8-dfe7d806c70b" aria-haspopup="true">
+                    <!---->
+                    <!----><span ng-if="dgLabel" ng-class="getTextClasses()" class="fd-button__text">admin
+</span><!---->
+                    <!---->
+                    <!----><i ng-if="isMenu" ng-class="getArrowClass()" class="sap-icon--slim-arrow-down"></i><!---->
+                    <!---->
+                </button>
+                    </div></ng-transclude>
+                <ng-transclude ng-transclude-slot="body"><div id="pae1f7611-3639-fe32-6bf8-dfe7d806c70b" class="fd-popover__body fd-popover__body--no-arrow fd-popover__body--right fd-popover__body--arrow-x-end" ng-class="getClasses()" aria-hidden="true" no-arrow="true" dg-align="bottom-right" can-scroll="false">
+                <!---->
+                <!----><ng-transclude ng-if="!canScroll">
+                        <nav class="fd-menu" ng-show="show" ng-class="getMenuClasses()" aria-label="user menu" aria-hidden="false"><ul ng-class="getListClasses()" role="menu" tabindex="-1" ng-transclude="" class="fd-menu__list fd-menu__list--no-shadow">
+                            <li class="fd-menu__item" ng-class="getItemClasses()" role="presentation" tabindex="-1" title="Logout" ng-click="logout()">
+                <span class="fd-menu__link" ng-class="getClasses()" role="menuitem" tabindex="0">
+                    <!---->
+                    <span class="fd-menu__title">Logout</span>
+                    <!---->
+                </span>
+            </li>
+                        </ul></nav>
+                    </ng-transclude><!---->
+            </div></ng-transclude>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="dg-contextmenu-overlay dg-hidden">
+    <nav class="fd-menu dg-invisible">
+        <ul class="fd-menu__list" role="menu">
+            <!---->
+        </ul>
+    </nav>
+</div>
+        <div class="dg-main-container"><!----><div class="dg-sidebar" ng-if="withSidebar">
+	<div class="fd-vertical-nav fd-vertical-nav--condensed ">
+		<nav aria-label="Vertical navigation" class="fd-vertical-nav__main-navigation">
+			<ul aria-label="Perspective list" class="fd-list">
+				<!----><li class="fd-list__navigation-item fd-list__navigation-item--condensed fd-list__navigation-item--indicated" id="perspective-terminal" ng-class="{'fd-list__navigation-item--indicated' : perspective.id === activeId}" ng-repeat="perspective in perspectives track by $index" tabindex="$index">
+					<a href="../ide-terminal/index.html" target="_self" title="Terminal">
+						<!----><ng-include class="dg-perspective-icon" src="getIcon(perspective.icon)"><!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="512" height="512" version="1.1" viewBox="-10 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <path d="m75.157-2.0628e-8c-24.128 0-44.352 8.1599-60.675 24.481-16.321 16.321-24.483 36.904-24.483 61.741v340.62c-6.7e-4 24.128 8.1612 44.354 24.483 60.676 16.322 16.321 36.546 24.481 60.675 24.481h340.62c24.838 6.7e-4 45.418-8.1592 61.739-24.481 16.321-16.322 24.481-36.548 24.481-60.676v-340.62c0-24.838-8.16-45.42-24.481-61.741-16.321-16.321-36.902-24.481-61.739-24.481zm-2.8477 52.995 2e-3 0.0059h89.058l-6e-3 -0.0059h258.33c8.685 0 15.742 2.7145 21.17 8.1426 5.428 5.4284 8.1407 12.486 8.1407 21.17v347.38c0 8.685-2.7128 15.742-8.1407 21.17-5.4284 5.4279-12.486 8.1426-21.17 8.1426h-347.38c-8.685 4e-4 -15.742-2.7141-21.17-8.1426-5.428-5.4284-8.1407-12.486-8.1407-21.17v-347.38c-4e-4 -8.685 2.7123-15.742 8.1407-21.17 5.4279-5.4275 12.485-8.1422 21.168-8.1426zm54.692 95.007c-7.3335 0-13.333 2.3333-18 7-4.6668 4.6667-7.0001 10.667-7.0001 18 0 7.3334 2.3333 13.333 7.0001 18l65.001 65-65.001 65c-4.6668 4.6667-7.0001 10.667-7.0001 18 0 6.6668 2.3333 12.667 7.0001 18 4.6667 4.6667 10.667 7 18 7 7.3334 0 13.333-2.3333 18-7l83.001-83.001c5.3334-5.3333 8.0001-11.333 8.0001-18 0-6.6668-2.6667-12.667-8.0001-18l-83.001-83.001c-4.6668-4.6667-10.667-7-18-7zm135 165c-8.0001 0-14.333 2.5-19 7.5001-4.6668 5-7.0001 11.167-7.0001 18.5 0 16.667 8.6667 25 26 25h102c7.3334 0 13.5-2.3333 18.5-7 5.0001-4.6667 7.5001-10.667 7.5001-18 0-7.3334-2.5-13.5-7.5001-18.5-5-5-11.167-7.5001-18.5-7.5001z"></path>
+</svg>
+</ng-include>
+						<span class="fd-list__navigation-item-text">Terminal</span>
+						<!----><span class="fd-list__navigation-item-indicator" ng-if="perspective.id === activeId"></span><!---->
+					</a>
+				</li><!---->
+			</ul>
+		</nav>
+	</div>
+</div><!----><!----><ng-transclude ng-if="shouldLoad" class="dg-perspective-container">
+            <iframe loading="eager" data-parameters="{&quot;container&quot;:&quot;layout&quot;,&quot;perspectiveId&quot;:&quot;terminal&quot;}" id="terminal" ng-src="../ide-terminal/terminal.html" src="../ide-terminal/terminal.html" cd_frame_id_="cce6aee8735b4abe1231182b24cdb5c9"></iframe>
+        </ng-transclude><!----></div>
+        <div class="dg-overlay dg-hidden">
+    <!-- Alert -->
+    <div id="dgIdeAlert" class="fd-message-box fd-message-box--information">
+        <!---->
+    </div>
+    <!-- Dialog -->
+    <section class="fd-dialog" id="dgIdeDialog">
+        <!---->
+    </section>
+    <!-- Busy Dialog -->
+    <section class="fd-dialog" id="dgIdeBusyDialog">
+        <div class="fd-dialog__content fd-dialog__content--s" role="dialog" aria-modal="true">
+            <div class="fd-dialog__body dg-center">
+                <div class="fd-busy-indicator-extended" dg-size="l">
+                <div class="fd-busy-indicator fd-busy-indicator--l" ng-class="getClasses()" aria-label="Loading" dg-size="l" contrast="">
+                <div class="fd-busy-indicator__circle"></div>
+				<div class="fd-busy-indicator__circle"></div>
+				<div class="fd-busy-indicator__circle"></div>
+            </div>
+                <div class="fd-busy-indicator-extended__label" ng-transclude=""></div>
+            </div>
+            </div>
+            <!---->
+        </div>
+    </section>
+    <!-- Form Dialog -->
+    <section class="fd-dialog" id="dgIdeFormDialog">
+        <!---->
+    </section>
+    <!-- Selectable dialog -->
+    <section class="fd-dialog" id="dgIdeSelectDialog">
+        <!---->
+    </section>
+    <!-- Window -->
+    <section class="fd-dialog" id="dgIdeDialogWindow">
+        <!---->
+    </section>
+</div>
+        <div class="dg-statusbar">
+	<div class="dg-statusbar-busy ng-hide" ng-hide="busy === ''" aria-hidden="true">
+		<div class="fd-busy-indicator contrast" aria-hidden="false" aria-label="Loading">
+			<div class="fd-busy-indicator__circle"></div>
+			<div class="fd-busy-indicator__circle"></div>
+			<div class="fd-busy-indicator__circle"></div>
+		</div>
+		<span class="dg-statusbar__text"></span>
+	</div>
+	<div class="dg-statusbar-message" ng-style="{'visibility': message ? 'visible':'hidden'}" style="visibility: hidden;">
+		<i class="dg-statusbar__icon sap-icon--information"></i>
+		<span class="dg-statusbar__text"></span>
+		<i class="dg-statusbar__icon dg-statusbar--link sap-icon--delete" ng-click="cleanStatusMessages()" role="button" tabindex="0"></i>
+	</div>
+	<div class="dg-statusbar-error" ng-style="{'visibility': error ? 'visible':'hidden'}" style="visibility: hidden;">
+		<i class=" dg-statusbar__icon sap-icon--message-warning"></i>
+		<span class="dg-statusbar__text"></span>
+		<i class="dg-statusbar__icon dg-statusbar--link sap-icon--delete" ng-click="cleanErrorMessages()" role="button" tabindex="0"></i>
+	</div>
+	<div class="dg-statusbar-caret"></div>
+</div>
+        <script type="text/javascript">
+            angular.module('terminal', ['ideLayout', 'ideUI'])
+            .config(["messageHubProvider", function (messageHubProvider) {
+                messageHubProvider.eventIdPrefix = 'terminal';
+            }])
+            .controller('TerminalController', ["$scope", "messageHub", function ($scope, messageHub) {
+            }]);
+        </script>
+        <script type="text/javascript">
+            window.addEventListener('beforeunload', function (e) {
+                e.preventDefault();
+                e.returnValue = '';
+            });
+        </script>
+    
+
+
+<div class="dg-backdrop"></div></body></html>
