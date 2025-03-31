@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.codbex.platform</groupId>
         <artifactId>codbex-platform-parent</artifactId>
-        <version>11.11.0</version>
+        <version>11.16.0</version>
     </parent>
 
     <name>codbex - theia - parent</name>
@@ -34,6 +34,7 @@
     <modules>
         <module>application</module>
         <module>branding</module>
+        <module>integration-tests</module>
     </modules>
 
     <dependencies>
@@ -144,6 +145,11 @@
             <dependency>
                 <groupId>com.codbex.theia</groupId>
                 <artifactId>codbex-theia-branding</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.codbex.theia</groupId>
+                <artifactId>codbex-theia-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

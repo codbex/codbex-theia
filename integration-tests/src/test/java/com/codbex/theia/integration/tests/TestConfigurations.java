@@ -8,17 +8,12 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.codbex.theia.ui.tests;
+package com.codbex.theia.integration.tests;
 
-import org.eclipse.dirigible.tests.framework.HtmlElementType;
-import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 
-class HomePageIT extends TheiaIntegrationTest {
-
-    @Test
-    void testOpenHomepage() {
-        ide.openHomePage();
-
-        browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, "codbex");
-    }
+@ComponentScan(basePackages = "org.eclipse.dirigible")
+@TestConfiguration
+class TestConfigurations {
 }
