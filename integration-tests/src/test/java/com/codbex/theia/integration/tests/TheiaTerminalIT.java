@@ -10,8 +10,8 @@
  */
 package com.codbex.theia.integration.tests;
 
-import org.eclipse.dirigible.tests.framework.HtmlAttribute;
-import org.eclipse.dirigible.tests.framework.HtmlElementType;
+import org.eclipse.dirigible.tests.framework.browser.HtmlAttribute;
+import org.eclipse.dirigible.tests.framework.browser.HtmlElementType;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.annotation.Import;
