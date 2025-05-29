@@ -15,7 +15,7 @@ on:
 run-name: 'version set to ${{ inputs.release-version }} for release'
 
 jobs:
-  main:
+  release:
     uses: codbex/codbex-infra/.github/workflows/platform-release.yaml@main
     with:
       platform-name: codbex-theia
@@ -24,18 +24,18 @@ jobs:
       docker-release: true
       release-content: |
         ## codbex-theia - ${{ inputs.release-version }}
-  
+        
         Terminal over HTTP
-  
+        
         ## Deployment
-  
+        
         ```
         docker run --name codbex-theia \
         --rm -p 80:80 -p 8081:8081 \
         ghcr.io/codbex/codbex-theia:${{ inputs.release-version }}
         ```
-  
+        
         ## Access points:
-  
+        
         - [/services/web/ide-terminal/](http://localhost/services/web/ide-terminal/) - Terminal Perspective
     secrets: inherit
