@@ -8,9 +8,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The application is essentially a thin assembly layer: nearly all functionality comes from `org.eclipse.dirigible:dirigible-components-*` dependencies declared in `application/pom.xml`. There is very little hand-written Java here — understand the codebase by understanding *which Dirigible components are included* and *how Spring profiles wire them up*, not by reading local source.
 
-### Product family
+### Product scope
 
-codbex-theia is one of a family of codbex products (see https://www.codbex.com/products/), each a Dirigible-based distribution scoped to a specific use case — e.g. **Atlas** (full development platform), **Helios** (API development), **Hades** (database management), **Hyperion** (BPMN), **Iapetus** (Apache Camel integration), **Rhea** (model-driven), **Phoebe** (Apache Airflow workflows). theia is the minimal, terminal-only member: it strips the platform down to shell access. This is why `dirigible.properties` sets `DIRIGIBLE_PRODUCT_TYPE=terminal`. When deciding what belongs in this repo, keep that scope in mind — broader IDE/engine features live in the larger products, not here.
+codbex-theia is a codbex product (see https://www.codbex.com/products/): a Dirigible-based distribution scoped to a single use case — minimal, terminal-only shell access. It strips the platform down to that, which is why `dirigible.properties` sets `DIRIGIBLE_PRODUCT_TYPE=terminal`. When deciding what belongs in this repo, keep that scope in mind — broader IDE/engine features are out of scope here.
 
 ## Module layout
 
